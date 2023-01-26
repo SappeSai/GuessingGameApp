@@ -36,15 +36,14 @@ namespace GuessingGame
             //Test your code and debug it if necessary.
 
 
-
+            
             // Generating random number between 1 and 20
-
+             
             Random rnd = new Random();
             int randomNumber = rnd.Next(1, 21);
-            
-
-            // Checking answer
+           
             bool isFinished = false;
+            int guessesNumber = 5;
 
             while (!isFinished)
             {
@@ -61,7 +60,7 @@ namespace GuessingGame
                 if (userGuessInt == randomNumber)
                 {
                     Console.WriteLine("Congratulations. You won!");
-                    break;
+                    isFinished = true;
                 }
                 else if (userGuessInt > randomNumber)
                 {
